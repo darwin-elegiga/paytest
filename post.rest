@@ -1,0 +1,134 @@
+POST http://localhost:3000/api/barbero
+Content-Type: application/json
+
+        {
+            "direccion_maps": "Darwin1",
+            "direccion": "Lento",
+            "ciudad": "ZUco",
+            "nombre": "100",
+            "contacto": 200,
+            "imagen": "foto"
+        }
+###
+GET http://localhost:3000/api/barbero
+###
+POST http://localhost:3000/api/corte
+Content-Type: application/json
+
+        {
+            "nombre": "Darwin2",
+            "estilo": "Mague",
+            "descripcion": "Feo",
+            "precio": 180,
+            "imagen": "foto",
+            "id_barbero": "6603b7102ac1393dd483b2ac"
+        }
+###
+GET http://localhost:3000/api/corte?id=6603b7102ac1393dd483b2ac
+###
+POST http://localhost:3000/api/producto
+Content-Type: application/json
+
+        {
+            "precio": 200,
+            "imagen": "foto",
+            "id_barberia": "66024de3634aa20f6a29f58a"
+        }
+###
+GET http://localhost:3000/api/producto?id=66024de3634aa20f6a29f58a
+###
+GET http://localhost:3000/api/corte/prueba
+###
+POST http://localhost:3000/api/reserva
+Content-Type: application/json
+
+        {
+            "id_barbero": "660e4f731f3447cf12faccce",
+            "qr": "sdasd",
+            "fecha": "2024-03-30",
+            "hora": "22:00",
+            "estado": false,
+            "id_barberia": ""
+        }
+###
+GET http://localhost:3000/api/reserva?id=6602fd3979765399c46b54dc&&fecha=2024-03-29
+###
+GET http://localhost:3000/api/reserva/admin?id=66024de3634aa20f6a29f58a&&fecha=2024-01-01
+###
+
+POST http://localhost:3000/api/users/register
+Content-Type: application/json
+
+        {
+        "username": "darwin",
+        "password": "123",
+        "barbero": "1",
+        "role": "admin"
+        }
+###
+PUT  http://localhost:3000/api/users/login
+Content-Type: application/json
+
+        {
+        "id": "660b4bf7a46fb48ff34ea063",
+        "OldPassword": "0000",
+        "NewPassword": "123"
+        }
+
+###
+POST http://localhost:3000/api/oferta/
+Content-Type: application/json
+
+        {
+        "titulo": "OfERTA2!!!",
+        "detalles": "Some representative placeholder content for the first slide"
+        }
+###
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+        {
+        "username": "darwin",
+        "password": "123"
+        }
+
+###
+DELETE  http://localhost:3000/api/producto/delete?id=6600592a3872b5b9ffd15b6b
+
+###
+###
+DELETE  http://localhost:3000/api/oferta/delete?id=660b3f1ec8310fb3f59b6f4f
+
+###
+PUT  http://localhost:3000/api/producto/p/65ffaa7de42ed3cd2282ddf9
+Content-Type: application/json
+
+        {
+        "precio": 200,
+        "imagen": "foto",
+        "detalles": "foto"
+        }
+        ###
+###        
+PUT  http://localhost:3000/api/corte/p/660b4ca3a46fb48ff34ea06c
+Content-Type: application/json
+
+        {
+        "precio": 200,
+        "nombre": "foto",
+        "descripcion": "xxx",
+        "estilo": "100"
+        }
+        ###
+###        
+POST http://localhost:3000/api/valoracion
+Content-Type: application/json
+
+        {
+        "fecha": "Mon Mar 01 2024 21:51:52 GMT-0400 (hora de verano de Cuba)",
+        "valoracion": "Mase menos",
+        "estrellas": 1
+        }
+
+###
+GET http://localhost:3000/api/valoracion?fecha=2025-01-01
